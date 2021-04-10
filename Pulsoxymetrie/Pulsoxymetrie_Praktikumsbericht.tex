@@ -1,0 +1,281 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[a4paper]{geometry}
+
+\usepackage{graphicx}
+%\graphicspath{ {./images/} }
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{PULSOXYMETRIE} %Kopfzeile links
+\fancyfoot[C]{\thepage}
+
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[german]{babel}
+
+\usepackage{setspace}
+
+\usepackage{caption}
+\usepackage{float}
+
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+\hypersetup{
+    pdftitle = {Pulsoxymetrie},
+    pdfsubject = {Biomedizinischesystemtechnik Praktikum},
+    pdfauthor = {Leona K{\"o}ck, Chris R{\"u}ttimann},
+    pdfkeywords = {} ,
+    pdfcreator = {pdflatex},
+    pdfproducer = {LaTeX with hyperref}
+}
+
+\usepackage[
+    style=apa,
+    backend=biber,
+    sortcites=false,
+    sorting=none,
+    hyperref=true,
+    backref=false
+]{biblatex}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\addbibresource{test.bib}
+
+\begin{document}
+    \pagenumbering{Alph}
+% ---------------------
+% Titlepage
+% ---------------------
+    \begin{titlepage}
+        \begin{center}
+        {\LARGE OST Ostschweizer Fachhochschule}
+            \\[1.5cm]
+            \linespread{1.2}\large { Biomedizinischesystemtechnik Praktikum }
+
+            \huge{\bfseries Pulsoxymetrie}
+            \\%[1.5cm]
+            \large{durchgef{\"u}hrt am 22. März 2021}
+            \\[1.5cm]
+   %         \linespread{1}
+           \includegraphics[width=8cm]{../images/ost_logo.eps}
+           \\[1cm]
+            {\small{Autoren}}\\
+            {\Large{Leona K{\"o}ck}}\\
+            {\Large{Chris R{\"u}ttimann}}
+            \\[1cm]
+
+            \vspace*{\fill}
+            \large{\today}
+        \end{center}
+
+    \end{titlepage}
+
+% ---------------------
+% Abstract
+% ---------------------
+    \pagenumbering{Roman}
+ %   \pdfbookmark[section]{Abstract}{abstract}
+ %   \section*{Abstract}
+    \addtocounter{section}{0}
+
+ %   \pagebreak
+    \setstretch{1.25}
+% ---------------------
+% Table of contents
+% ---------------------
+    \tableofcontents
+    \pagebreak
+
+
+% ---------------------
+% Body
+% ---------------------
+    \pagenumbering{arabic}
+
+    \section{Problem- und Zielvorstellung}
+   Ziel dieses Praktikums war es, die Sauerstoffsättigung des Blutes mithilfe des Pulsoxymeter Frontend zu messen. 
+   Dieselbe Messung sollte mit einem handelsüblichen Pulsoxymeter durchgeführt und verglichen werden.
+
+    \section{Problemlösung}
+
+    \subsection{Vorbereitung}
+    Zur Vorbereitung wurden mithilfe des Dokuments \cite{Pulsoxymetrie} die folgenden Fragen beantwortet:
+    
+    \begin{itemize}
+        \item[a]  Weshalb kann eine lebensgefährliche Kohlenmonoxid-Vergiftung über die
+        Pulsoxymetrie nicht erkannt werden?
+        \item[] Bei der Pulsoxymetrie wird ausgenutzt, dass belandene Hämaglobin, im Normalfall oxygeniertes Hämoglobin, 
+        bei optischen Wellenlängen einen deutlich anderen Absorptionsverlauf als desoxyganiertes Hämogobin. 
+        Es kann aber nicht unterschieden werden, welcher Stoff tatsächlich an das Hämoglobin gebunden ist.
+        \item[b] Welche Bedingung müsste ein Pulsoxymeter erfüllen, um eine KohlenmonoxidVergiftung zu erkennen?
+        \item[]  Die sogenannten CO-Oxymeter messen mit 4 bis 7 anstatt der sonst verwendeten 2 verschiedenen Wellenlängen und sind daher in der 
+        Lage Bindungen mit Kohlenmonoxid von Bindungen mit Sauerstoff optisch zu unterscheiden.
+        \item[c] Wozu schaltet man im Messzyklus eine Dunkelphase ein? Was wird damit
+        korrigiert?
+        \item[] In der Dunkelphase werden die momentanen Störeinflüsse aus der Umgebung ermittelt und kompensiert.
+        \item[d] Was ist die funktionelle und fraktionelle Sauerstoffsättigung?
+        \item[] Funktionelle Sauerstoffsättigung: 
+        \begin{equation}
+            s_aO_2 = \frac{cO_2Hb}{cO_2Hb + cHb} 
+        \end{equation}
+        \item[] Fraktionelle Sauerstoffsättigung: hier werden alle Hb-Derivate gemessen, beispielsweise CO-Oxymeter
+        \begin{equation}
+            s_aO_2,func = \frac{cO_2Hb}{cO_2Hb + cHb + cCOHb + cMetHb + ...} 
+        \end{equation}
+        \item[e] In welcher Grössenordnung liegen die Messfehler der Pulsoxymeter und worin
+        besteht dabei die Gefahr? 
+        \item[] Die Hersteller geben die Genauigkeit beispielsweisen mit 2\% im Sättigungsbereich über 90\% an. 
+        Da aber rund zwei Drittel der Messfälle zwischen 82 und 88\% fallen ist mit größeren Abweichungen zu rechnen. 
+        Generell gilt zu beachten dass es sich beim Pulsoxymeter um eine nichinvasive Messmethode handelt, 
+        daher sollte nicht auf den Absolutwert sonder auf die Messwertänderung geachtet werden. 
+    \end{itemize}
+
+    Zusätzlich wurde das Blockschaltbild siehe Bild genauer untersucht. 
+
+
+    Für der Versuch wurden folgende Materialien benötigt:
+
+    \begin{itemize}
+        \item  Pulsoxymeter (kommerzielles Messgerät)
+        \item Pulsoxymeter Frontend (Laboraufbau)
+        \item Oszilloskop
+        \item USB und BNC Kabel 
+        
+    \end{itemize}
+
+    \subsection{Messung}
+    Zuerst wurde jeweils mithilfe des Oszilloskops die Ausgangsspannung in AC und DC am Pulsoxymeter Frontend bestimmt. 
+    Bewegungsartefakte galt es weitgehend zu vermeiden.
+    Anschliessend wurde noch der Dunkelwert aufegenommen um die Einflüsse der Umgebung kompensieren zu können. 
+    Mithilfe der \cite{Pulsoxymetrie} konnte die Sauerstoffsättigung wie folgt ermittelt werden:
+    \begin{equation}
+        R = \frac{AC_{rot}}{DC_{rot} - Dunkelwert} 
+    \end{equation}
+    \begin{equation}
+        IR = \frac{AC_{ifr}}{DC_{ifr} - Dunkelwert} \\
+    \end{equation}
+    \begin{equation}
+        SaO_{2} = \frac{R}{IR} \\
+    \end{equation}
+
+    \section{Ergebnisse}
+
+
+    \subsection{Proband Chris Rüttimann}
+    \begin {table} [h]
+    \centering
+    \caption{Messergebnisse Pulsoxymetrie Frontend Chris}
+    \label{tab:chris_frontend}
+    \begin{tabular}{c|c c c}
+        Messart & AC [mV] & DC [mV] & Puls [ms] \\
+        \hline
+        Infrarot & 926.5 & 195 & 955 \\
+        Rot & 124 & 33 & 896 \\
+        \hline
+        Dunkelwert= 8mV \\
+        IR = \\
+        R = \\
+        SaO_{2} = 
+    \end{tabular}  
+    \end{table}
+
+    \begin {table} [h]
+    \centering
+    \caption{Messergebnisse Pulsoxymeter Chris}
+    \label{tab:chris_frontend}
+    \begin{tabular}{c|c}
+        SpO_{2} & 97 \%  \\
+        BPM & 55 
+    \end{tabular}  
+    \end{table}
+
+
+    \pagebreak
+
+    \subsection{Proband Leona Köck}
+    \begin {table} [h]
+    \centering
+    \caption{Messergebnisse Pulsoxymetrie Frontend Leona}
+    \label{tab:leona_frontend}
+    \begin{tabular}{c|c c c}
+        Messart & AC [mV] & DC [mV] & Puls [ms] \\
+        \hline
+        Infrarot & 241.8 & 360 & 765 \\
+        Rot & 45.75 & 40 & 680 \\
+        \hline
+        Dunkelwert: 8.76mV \\
+        IR = \\
+        R = \\
+        SaO_{2} = 
+    \end{tabular}  
+    \end{table}
+
+    \begin {table} [h]
+    \centering
+    \caption{Messergebnisse Pulsoxymeter Leona}
+    \label{tab:chris_frontend}
+    \begin{tabular}{c|c}
+        SpO_2 & 97 \%  \\
+        \hline
+        BPM & 87 
+    \end{tabular}  
+    \end{table}
+   
+    \section{Kritik und Anregungen}
+	% Was ned ob ma des brucht
+    \pagebreak
+
+    \section*{Eigenständigkeitserklärung}
+    \addcontentsline{toc}{section}{Eigenständigkeitserklärung}
+
+    Hiermit bestätigen wir, dass wir diesen Bericht selbstständig und ohne fremde Hilfe verfasst haben.
+    Alle verwendeten Quellen wurden entsprechend dem APA-Standard gekennzeichnet.
+    \\[3cm]
+
+
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{.././images/Unterschrift_Leona.png}
+    \end{figure}
+    \begin{tabular}{@{} l@{}}
+        \hline \\
+        \makebox[6cm]{Leona Köck}\\[2cm]
+    \end{tabular}
+
+
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{.././images/Unterschrift_Chris.png}
+    \end{figure}
+    \begin{tabular}{@{} l@{}}
+        \hline\\
+        \makebox[6cm]{Chris Rüttimann}
+    \end{tabular}
+
+    \pagebreak
+% ---------------------
+% References
+% ---------------------
+    \printbibliography
+    \addcontentsline{toc}{section}{Literaturverzeichnis}
+
+% ---------------------
+% List of figures
+% ---------------------
+%    \listoffigures
+%    \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+%    \pagebreak
+
+% ---------------------
+% List of tables
+% ---------------------
+%\listoftables
+
+
+
+% ---------------------
+% Anhang
+% ---------------------
+%\appendix
+
+\end{document}
