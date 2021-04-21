@@ -1,0 +1,4 @@
+Pdflatex Doppler_Praktikumsbericht
+biber Doppler_Praktikumsbericht
+Pdflatex Doppler_Praktikumsbericht.tex
+exit
