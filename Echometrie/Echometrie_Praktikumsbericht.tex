@@ -7,7 +7,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{ECHOMETRIE} %Kopfzeile links
+\fancyhead[L]{ECHOGRAPHIE} %Kopfzeile links
 \fancyfoot[C]{\thepage}
 
 \usepackage[utf8]{inputenc}
@@ -23,7 +23,7 @@
 \usepackage{pdfpages}
 
 \hypersetup{
-    pdftitle = {Echometire},
+    pdftitle = {Echographie},
     pdfsubject = {Biomedizinischesystemtechnik Praktikum},
     pdfauthor = {Leona Köck, Chris Rüttimann},
     pdfkeywords = {} ,
@@ -42,6 +42,7 @@
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
 %\addbibresource{test.bib}
+\setlength{\parindent}{0in}
 
 \begin{document}
     \pagenumbering{Alph}
@@ -52,18 +53,18 @@
         \begin{center}
         {\LARGE OST Ostschweizer Fachhochschule}
             \\[1.5cm]
-            \linespread{1.2}\large { Biomedizinischesystemtechnik Praktikum }
+            \linespread{1.2}\large { Biomedizinische Systemtechnik Praktikum }
 
-            \huge{\bfseries Echometire}
+            \huge{\bfseries Echographie}
             \\%[1.5cm]
-            \large{durchgef{\"u}hrt am 22. März 2021}
+            \large{durchgeführt am 22. März 2021}
             \\[1.5cm]
    %         \linespread{1}
            \includegraphics[width=8cm]{../images/ost_logo.eps}
            \\[1cm]
             {\small{Autoren}}\\
-            {\Large{Leona K{\"o}ck}}\\
-            {\Large{Chris R{\"u}ttimann}}
+            {\Large{Leona Köck}}\\
+            {\Large{Chris Rüttimann}}
             \\[1cm]
 
             \vspace*{\fill}
@@ -107,10 +108,21 @@
         \item  PC mit Software (Patientandatenbank und Audiometrieprogramm)
         
     \end{itemize}
-    Fragen beantworten:
+
+    Zur Vorbereitung wurden mithilfe des Dokuments \cite{QUELLEHIER} die folgenden Fragen beantwortet: %todo
+
+    \begin{itemize}
+        \item[a] Wie viel Zeit wird benötigt, um ein Echogramm aufzunehmen, das aus 64 einzelnen parallelen Linien besteht und eine Eindringtiefe von 75 mm aufweist?
+        \item[]  BLABLA
+        \item[b] Wie gross muss das Schallfenster beim linearen Array-Transducer sein, damit der ganze Array benützt werden kann (am Transducer nachmessen)?
+                 Ist dieser Transducertyp günstig, um das Herz abzubilden?
+        \item[]  BLABLA
+
+    \end{itemize}
+
+    \subsection{Messungen}
 
 
-    \subsection{Messung}
     
     \section{Ergebnisse}
 
@@ -161,9 +173,9 @@
 % ---------------------
 % List of figures
 % ---------------------
-%    \listoffigures
-%    \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-%    \pagebreak
+    \listoffigures
+    \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    \pagebreak
 
 % ---------------------
 % List of tables
@@ -175,6 +187,66 @@
 % ---------------------
 % Anhang
 % ---------------------
-%\appendix
+\appendix
+
+    \section{Bilder Aufgabe D}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/D_5_15_e}
+        \caption{5MHz 15mm}
+        \label{fig:D_5_15}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/D_5_46_e}
+        \caption{5MHz 46mm}
+        \label{fig:D_5_46}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/D_8_15_e}
+        \caption{8MHz 15mm}
+        \label{fig:D_8_15}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/D_8_46_e}
+        \caption{8MHz 46mm}
+        \label{fig:D_8_46}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/D_ohne_dynamisch_fokusiert_e}
+        \caption{Ohne dynamischen Fokus}
+        \label{fig:o_d_F}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/D_3_e}
+        \caption{Curved Array}
+        \label{fig:curvedArray}
+    \end{figure}
+
+    \section{Bilder Aufgabe E}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/E1_e}
+        \caption{Carotis 1}
+        \label{fig:carotis1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm]{images/E2_e}
+        \caption{Carotis 2}
+        \label{fig:carotis2}
+    \end{figure}
 
 \end{document}
