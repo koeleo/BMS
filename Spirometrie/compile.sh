@@ -1,0 +1,4 @@
+pdflatex Spirometrie_Praktikumsbericht.tex
+biber Spirometrie_Praktikumsbericht
+pdflatex Spirometrie_Praktikumsbericht.tex
+exit
