@@ -95,31 +95,86 @@
     \pagenumbering{arabic}
 
     \section{Problem- und Zielvorstellung}
-   
+    Ziel dieses Praktikums war es, die Vorteile der nichtinvasiven Messmethode nach dem Prinzip \emph{Continuous Wave Doppler}
+    kennenzulernen und sowie die bereits vorhandenen Kenntnisse aus der Vorlesung mit praktischen Versuchen zu vertiefen. 
     \section{Problemlösung}
-
     \subsection{Vorbereitung}
-   
-
+   Das Praktikum wurden anhand der Angaben aus \cite{Doppler} durchgeführt.
+    
     Für der Versuch wurden folgende Materialien benötigt:
-
     \begin{itemize}
-        \item  PC mit Software (Patientandatenbank und Audiometrieprogramm)
-        
+        \item Dopplergerät HiDop 360 
+        \item PC mit der Software HiDop
+        \item 4MHz und 8MHz Transducer
+        \item 4MHz Test-Transducer 
+        \item Halterung für zwei Transducer
+        \item Funktionsgenerator HMF 2550 
+        \item Gel
     \end{itemize}
-    Fragen beantworten:
 
 
     \subsection{Messung}
-    
+    \subsubsection{HiDop 360}
+    Die erste Aufgabe bestand darin, sich mit dem Dopler-Messgerät vertraut zu machen 
+    und die wichtigsten Funktionen kennen zu lernen.
+    Dazu gehörte unter anderem die zwei Sonden mit dem MEssgerät zu verbinden, das Messgerät 
+    wiederum mit dem PC zu verbinden sowie das Programm HiDop zu starten.
+    Es wurde ein Patient angelegt um die folgenden Messungen speichern zu können und somit auch die ersten Messungen durchgeführt. 
+    %Eventuell Messaufbau zeichnen? 
+
+    \subsubsection{Ausmessen des Dopplergerätes HiDop 360}
+    Die zweite Aufgabe war es, mithilfe eines Sonogramms zu überprüfen, ob das Dopplergerät funktioniert und richtig geeicht ist. 
+    Dazu wurde der der 4MHz Transducer des Messgeräts sowie der Testtranducer in die Halterung mit ca. einem Millimeter Abstand eingespannt.
+    Um eine gute Übertragung des Signals zu gewährleisten ist der Zwischenraum mit Gel gefüllt worden. 
+    Der Testtranducer war mithilfe eines Abschwächers an den Funktionsgenerator, der ein 4.001MHz Sinussignal liefert, angeschlossen. 
+    Die Verbindung mit dem PC wurde genutzt um das Sonogramm besser darzustellen und speichern zu könnnen.
+    Am Gerät selbst wurde der 5kHz Messbereich, eine Zeitablenkung von 4s sowie die Sonogrammdarstellung gewählt.
+
+    \subsubsection{Testmessung an Gefässen}
+    Um Messungen an den Gefässen der Probanden vorzunehmen wurde auf den 8MHz Transducer gewechselt. 
+    Am Dopplergerät wurdend ie Doppler-indizies S/D und RI eingestellt. 
+    Bei den beiden Probenden Chris Rüttimann und Leona Köck wurden Messungen sowohl an der Carotis Communis (Halsschalgader), als auch an der Arteria Carotis (Handgelenk) durchgeführt.
+
+    \subsubsection{FFT}
+
     \section{Ergebnisse}
+    \subsubsection{Ausmessen des Dopplergerätes HiDop 360}
+    Wie nach lesen der Angabe zu erwarten war, stimmte die gemessene Frequenz des Dopplergeräts nicht genau mit der des Funtionsgenerators überein.
+    Zu sehen ist dies in der Abbildung 
+    Das ist der Fall, weil der Funktionsgenerator genauer ist als des medizinischen Messgeräts.
+    Die Frequenz des Quarzes vond dem Dopplergerät weicht aufrund von Temperatur und Alter ab. 
+    Diese Differenz wird in ppm angegeben, wobei 100ppm bei medizinischen Messgeräten dem Standard entspäricht.
+    Berechnet man dies, würde das für diese Messung schon eine Differenz von 400Hz bedeuten. 
+    Die Abweichung ist bei dem Messgerät nicht von großer Bedeutung, da durch den verwendeten Demodulator lediglich das Differenzsignal (=Dopplerfrequenz) erhalten bleibt.\\
+    Um die angestrebten 4.001MHz zu erreichen wurden der das Signal des Funktionsgenerators um 180Hz erhöht. 
 
+    \begin{figure}[H]
+        \includegraphics[]{../images/4001MHz.png}
+    \end{figure}
 
-    \subsection{Proband Chris Rüttimann}
-  
-    \pagebreak
+    \subsubsection{Testmessung an Gefässen}
+     Frequenz nicht so wichtig .... Muster ist wichtiger ... ist aber bei jeder Stelle anderst und andere 
+     Ausprägungen bedeuten andere Sachen ⇒ sehr komplex 
+    Messwinkel ca. 60 Grad beachten (in Flussrichtung) 
+    ... Bewegungsartefakte vermeiden
+    messungen am liegenden Patient würden bessere ERgebnisse erzielen 
+    % deutung: https://www.kup.at/kup/pdf/3947.pdf sieht vielversprechend aus... weiß aber nicht ob wir das brauchen, wird nicht erwartet ... 
 
-    \subsection{Proband Leona Köck}
+     Chris: sehr leicht
+     Leona: schwer zu finden.... auf Ton hören hilft 
+    \begin{figure}[H]
+        \includegraphics[]{../images/Chris_Hals.png}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[]{../images/Chris_Handgelenk.png}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[]{../images/Leona_Hals.png}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[]{../images/Leona_Handgelenk.png}
+    \end{figure}
+    \subsubsection{FFT}
 
    
     \section{Kritik und Anregungen}
