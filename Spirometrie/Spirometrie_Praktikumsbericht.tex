@@ -41,7 +41,8 @@
 ]{biblatex}
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
-%\addbibresource{test.bib}
+\usepackage{siunitx}
+\addbibresource{Quellen.bib}
 
 \begin{document}
     \pagenumbering{Alph}
@@ -98,40 +99,86 @@
 
     \subsection{Vorbereitung}
 
-    Zur Vorbereitung wurden mithilfe des Dokuments \cite{QUELLEHIER} die folgenden Fragen beantwortet: %todo
+    Zur Vorbereitung wurden mithilfe der Praktikumsanleitung~\parencite{Spirometrie} die folgenden Fragen beantwortet: %todo
 
     \begin{itemize}
-        \item[a] Schätzen Sie mit Formel (1) den Einfluss des barometrischen Luftdruckes zwischen 0m (Meereshöhe, 101 kPa) und 2000m (79 kPa) ab!
+        \item[a] Schätzen Sie den Einfluss des barometrischen Luftdruckes zwischen 0m (Meereshöhe, 101 kPa) und 2000m (79 kPa) ab!
                  Der Wasserdampfdruck betrage in beiden Fällen bei 20°C und 40\% Luftfeuchtigkeit 0.9kPa.
-        \item[]  BLABLA
+        \item[]  $V_{BTPS}=V_{ATP}*\frac{273.2+37}{273.2+t}*\frac{P_B-P_{H_2Ot}}{P_B-6.266}$
+        \item[] $t$: Umgebuntstemperatur in °C
+        \item[] $P_B$: Barometerdruck in kPa
+        \item[] $P_{H_20t}$: Wasserdampfdruck bei Umgebungstemperatur $t$
+        \item[] Meereshöhe: $\frac{273.2+37}{273.2+20}*\frac{101-0.9}{101-6.266}=1.118$
+        \item[] 2000m : $\frac{273.2+37}{273.2+20}*\frac{79-0.9}{79-6.266}=1.136$
+        \item[] Der Einfluss beträgt ca. 1.5\%
         \item[b] Wie gross ist der Einfluss der Umgebungstemperatur bei 10°, 20° und 30° C auf Meereshöhe?
-        \item[]  BLABLA
+        \item[] 10° C: $\frac{273.2+37}{273.2+10}*\frac{101-0.9}{101-6.266}=1.157$
+        \item[] 20° C: $\frac{273.2+37}{273.2+20}*\frac{101-0.9}{101-6.266}=1.118$
+        \item[] 30° C: $\frac{273.2+37}{273.2+30}*\frac{101-0.9}{101-6.266}=1.081$
 
     \end{itemize}
-
-    Für der Versuch wurden folgende Materialien benötigt:
-
-    \begin{itemize}
-        \item  PC mit Software (Patientandatenbank und Audiometrieprogramm)
-        
-    \end{itemize}
-    Fragen beantworten:
-
 
     \subsection{Messung}
-    
+
+    Für die Messungen wurden folgende Materialien benötigt:
+
+    \begin{itemize}
+        \item PC mit Spirometrieprogramm (EasyOne connect)
+        \item Messgerät (Easy on-PC von ndd, SN-202878)
+    \end{itemize}
+
+    Das Messgerät ist ein offenes System, bei dem in die freie Atmosphäre geatmet wird.
+    Jeder Proband verwendete eine eigene Spirette.
+
     \section{Ergebnisse}
-
-
     \subsection{Proband Chris Rüttimann}
-  
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[clip, trim=1cm 10cm 0cm 11cm, width=15cm]{Dateien/Chris1.pdf}
+        \caption{Chris, Messreihe 1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[clip, trim=1cm 10cm 0cm 11cm, width=15cm]{Dateien/Chris2.pdf}
+        \caption{Chris, Messreihe 2}
+    \end{figure}
+
+    Die Messungen zeigen, dass bei Proband Chris die Lungenfunktion dem erwarteten Wert entsprechen.
+    Es können keine Abweichungen festgestellt werden, die auf eine Lungenkrankheit deuten.
+
     \pagebreak
 
-    \subsection{Proband Leona Köck}
+    \subsection{Probandin Leona Köck}
 
-   
-    \section{Kritik und Anregungen}
-	% Was ned ob ma des brucht
+    \begin{figure}[H]
+        \centering
+        \includegraphics[clip, trim=1cm 10cm 0cm 10.6cm, width=15cm]{Dateien/Leona1.pdf}
+        \caption{Leona, Messreihe 1}
+    \end{figure}
+
+        \begin{figure}[H]
+        \centering
+        \includegraphics[clip, trim=1cm 10cm 0cm 10.6cm, width=15cm]{Dateien/Leona2.pdf}
+        \caption{Leona, Messreihe 2}
+        \end{figure}
+
+    Bei Probandin Leona ist eine sehr leichte Obstruktion erkennbar.
+    Es ist bekannt, dass ihr linker Lungenflügel etwas kleiner ist wie im Durchschnitt.
+
+    \section{Lungenkrankheiten}
+
+    \begin{figure}[H]
+        \includegraphics[width=15cm]{Dateien/Flusskurve.jpeg}
+        \caption{Fluss-Volumenkurven, \cite{Flusskurven}}
+        \label{fig:flusskurve}
+    \end{figure}
+
+    Abbildung \ref{fig:flusskurve} zeigt verschiedene Fluss-Volumenkurve und die dazugehörigen medizineschen Befunde.
+    Bei einer Obstruktion ist die Kurve konvex deformiert.
+    Liegt eine Restriktion vor, hat die Kurve dieselbe Form wie beim Normalbefund, ist aber kleiner.
+
     \pagebreak
 
     \section*{Eigenständigkeitserklärung}
@@ -178,8 +225,6 @@
 % ---------------------
 %\listoftables
 
-
-
 % ---------------------
 % Anhang
 % ---------------------
@@ -192,7 +237,7 @@
     \begin{figure}[H]
         \hspace*{-3cm}
         \centering
-        \includegraphics[clip, trim=0cm 13cm 0cm 0cm, width=1.4\textwidth]{Dateien/Chris1.pdf}
+        \includegraphics[clip, trim=0cm 10cm 0cm 0cm, width=1.4\textwidth]{Dateien/Chris1.pdf}
     \end{figure}
 
     \section{Messung 2 Chris}
@@ -201,7 +246,7 @@
     \begin{figure}[H]
         \hspace*{-3cm}
         \centering
-        \includegraphics[clip, trim=0cm 13cm 0cm 0cm, width=1.4\textwidth]{Dateien/Chris2.pdf}
+        \includegraphics[clip, trim=0cm 10cm 0cm 0cm, width=1.4\textwidth]{Dateien/Chris2.pdf}
     \end{figure}
 
     \section{Messung 1 Leona}
@@ -210,7 +255,7 @@
     \begin{figure}[H]
         \hspace*{-3cm}
         \centering
-        \includegraphics[clip, trim=0cm 13cm 0cm 0cm, width=1.4\textwidth]{Dateien/Leona1.pdf}
+        \includegraphics[clip, trim=0cm 10cm 0cm 0cm, width=1.4\textwidth]{Dateien/Leona1.pdf}
     \end{figure}
 
     \section{Messung 2 Leona}
@@ -219,7 +264,7 @@
     \begin{figure}[H]
         \hspace*{-3cm}
         \centering
-        \includegraphics[clip, trim=0cm 13cm 0cm 0cm, width=1.4\textwidth]{Dateien/Leona2.pdf}
+        \includegraphics[clip, trim=0cm 10cm 0cm 0cm, width=1.4\textwidth]{Dateien/Leona2.pdf}
     \end{figure}
 
 \end{document}
