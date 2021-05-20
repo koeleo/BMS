@@ -41,8 +41,9 @@
 ]{biblatex}
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
-%\addbibresource{test.bib}
+\addbibresource{test.bib}
 \setlength{\parindent}{0in}
+
 
 \begin{document}
     \pagenumbering{Alph}
@@ -101,28 +102,35 @@
 
     \section{Vorbereitung}
    
-
-    Für der Versuch wurden folgende Materialien benötigt:
+    Der Versuch wurde nach der Anleitung von \cite{Echographie} durchgeführt.
+    Dafür wurden folgende Materialien benötigt:
 
     \begin{itemize}
-        \item  PC mit Software (Patientandatenbank und Audiometrieprogramm)
+        \item PC mit Software (Echo Wave II)
+        \item Ultraschallgerät LogicScan der Firma Telemed
+        \item Linear Array-Transducer mit 64 Elementen, 5-10MHz
+        \item Ultraschall-Phantom
+        \item Ultraschall-Gel
         
     \end{itemize}
 
-    Zur Vorbereitung wurden mithilfe des Dokuments \cite{QUELLEHIER} die folgenden Fragen beantwortet: %todo
+    Zur Vorbereitung wurden mithilfe des Dokuments \cite{medUS} die folgenden Fragen beantwortet: %todo
 
     \begin{itemize}
         \item[a] Wie viel Zeit wird benötigt, um ein Echogramm aufzunehmen, das aus 64 einzelnen parallelen Linien besteht und eine Eindringtiefe von 75 mm aufweist?
         \item[]  BLABLA
         \item[b] Wie gross muss das Schallfenster beim linearen Array-Transducer sein, damit der ganze Array benützt werden kann (am Transducer nachmessen)?
                  Ist dieser Transducertyp günstig, um das Herz abzubilden?
-        \item[]  BLABLA
-
+        \item[]  Der Linearschallkopf arbeitet mit einer parallelen Schallausbreitung, daher entsteht ein
+        rechteckiges Bild. Das Scchallfenster entspricht also der Länge des Transducers selbst. Er benötigt dadurch
+        eine recht grosse Fläche zu Ankoppelung, das ist ein Nachteil wenn nur begrenzter Platz zur Verfügung steht. Eine Untersuchung in knöchern geschützen Regionen wie
+        beispielsweise das Herz ist daher nur sehr eingeschränkt möglich.
     \end{itemize}
 
-    \section{Messungen}
+    \section{Messungen und Ergebnisse}
 
-    \subsection{Aufgabe D, Messungen am Phantom}
+    \subsection{Aufgabe D: Messungen am Phantom}
+    Zuerst Beginn wurde das Gerät in Betrieb genommen und die Software \emph{Echo Wave II} in Betrieb genommen.
 
     \subsubsection{5 und 8 MHz, Dynamischer Fokus}
 
@@ -146,7 +154,7 @@
 
     %todo, Erklärung dynamischer Fokus https://www.ndt.net/article/v05n09/waldron/waldron.htm#3
 
-    \subsection{Aufabe E, Carotis}
+    \subsection{Aufabe E: Carotis}
 
     Die Halsschlagader abzubilden war für die Autoren nicht ganz einfach.
     Nach mehreren Versuchen konnte dann dieses Bild erstellt werden: Abbildung \ref{images/E1_e}.
