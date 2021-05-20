@@ -134,9 +134,18 @@
         daher sollte nicht auf den Absolutwert, sondern auf die Messwertänderung geachtet werden.
     \end{itemize}
 
-    Zusätzlich wurde das Blockschaltbild siehe Bild genauer untersucht. + bisschen Beschreibung?
+    Zusätzlich wurde das Blockschaltbild siehe Bild genauer untersucht.
 
     \includegraphics[width=15cm]{../images/Blockschaltbild}
+
+    Das Polsoxymeter Frontend hat 2 LED's mit unterschiedlichen Wellenlängen.
+    Diese werden über eine Konstantstromquellen mit Strom versorgt.
+    Sobald das Licht den Finger durchdrungen hat, wird es von einem Optischen Sensor in ein Signal umgewandelt.
+    Im Blockschaltbild ist der Sensor durch eine Photodiode dargestellt, der Sensor selbst besteht aber noch aus weiteren Komponenten.
+    Dieses Signal wird danach verstärkt und als DC Out ausgegeben.
+    Dasselbe Signal läuft durch Hoch-, Tief- und wieder einen Hochpass, bevor es als AC Signal verwendet werden kann.
+    Gemäss Schema gäbe es noch die Möglichkeit, dass Ausgangssignal des Optischen Sensors über einen Spannungsfolger direkt zu verwenden (RAW OUT), dies wurde in diesem Praktikum nicht benötigt.
+
 
     Für den Versuch wurden folgende Materialien benötigt:
 
