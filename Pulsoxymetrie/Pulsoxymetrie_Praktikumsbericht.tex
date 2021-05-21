@@ -108,12 +108,12 @@
     \begin{itemize}
         \item[a]  Weshalb kann eine lebensgefährliche Kohlenmonoxid-Vergiftung über die
         Pulsoxymetrie nicht erkannt werden?
-        \item[] Bei der Pulsoxymetrie wird ausgenutzt, dass belandene Hämaglobin, im Normalfall oxygeniertes Hämoglobin, 
-        bei optischen Wellenlängen einen deutlich anderen Absorptionsverlauf als desoxyganiertes Hämogobin. 
+        \item[] Bei der Pulsoxymetrie wird ausgenutzt, dass beladene Hämaglobin, im Normalfall oxygeniertes Hämoglobin, %todo, hämaglobin vs hämoglobin?
+        bei optischen Wellenlängen einen deutlich anderen Absorptionsverlauf als desoxygeniertes Hämoglobin.
         Es kann aber nicht unterschieden werden, welcher Stoff tatsächlich an das Hämoglobin gebunden ist.
-        \item[b] Welche Bedingung müsste ein Pulsoxymeter erfüllen, um eine KohlenmonoxidVergiftung zu erkennen?
+        \item[b] Welche Bedingung müsste ein Pulsoxymeter erfüllen, um eine Kohlenmonoxid Vergiftung zu erkennen?
         \item[]  Die sogenannten CO-Oxymeter messen mit 4 bis 7 anstatt der sonst verwendeten 2 verschiedenen Wellenlängen und sind daher in der 
-        Lage Bindungen mit Kohlenmonoxid von Bindungen mit Sauerstoff optisch zu unterscheiden.
+        Lage, Bindungen mit Kohlenmonoxid von Bindungen mit Sauerstoff optisch zu unterscheiden.
         \item[c] Wozu schaltet man im Messzyklus eine Dunkelphase ein? Was wird damit
         korrigiert?
         \item[] In der Dunkelphase werden die momentanen Störeinflüsse aus der Umgebung ermittelt und kompensiert.
@@ -134,18 +134,23 @@
         daher sollte nicht auf den Absolutwert, sondern auf die Messwertänderung geachtet werden.
     \end{itemize}
 
-    Zusätzlich wurde das Blockschaltbild siehe Bild genauer untersucht.
+    Zusätzlich wurde das Blockschaltbild (\autoref{fig:block}) genauer untersucht.
 
-    \includegraphics[width=15cm]{../images/Blockschaltbild}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=15cm]{../images/Blockschaltbild}
+        \caption{Blockschaltbild Pulsoxymeter Frontend, eigene Grafik}
+        \label{fig:block}
+    \end{figure}
 
     Das Polsoxymeter Frontend hat 2 LED's mit unterschiedlichen Wellenlängen.
-    Diese werden über eine Konstantstromquellen mit Strom versorgt.
+    Diese werden über zwei Konstantstromquellen mit Strom versorgt.
     Sobald das Licht den Finger durchdrungen hat, wird es von einem Optischen Sensor in ein Signal umgewandelt.
-    Im Blockschaltbild ist der Sensor durch eine Photodiode dargestellt, der Sensor selbst besteht aber noch aus weiteren Komponenten.
+    Im Blockschaltbild ist der Sensor durch eine Photodiode dargestellt, der Sensor selbst besteht aber aus weiteren Komponenten.
     Dieses Signal wird danach verstärkt und als DC Out ausgegeben.
     Dasselbe Signal läuft durch Hoch-, Tief- und wieder einen Hochpass, bevor es als AC Signal verwendet werden kann.
-    Gemäss Schema gäbe es noch die Möglichkeit, dass Ausgangssignal des Optischen Sensors über einen Spannungsfolger direkt zu verwenden (RAW OUT), dies wurde in diesem Praktikum nicht benötigt.
-
+    Gemäss Schema gäbe es noch die Möglichkeit, dass Ausgangssignal des Optischen Sensors über einen Spannungsfolger direkt zu verwenden (RAW OUT), dies wurde jedoch in diesem Praktikum nicht benötigt.
+    \\\\
 
     Für den Versuch wurden folgende Materialien benötigt:
 
@@ -158,10 +163,10 @@
     \end{itemize}
 
     \subsection{Messung}
-    Zuerst wurde jeweils mithilfe des Oszilloskops die Ausgangsspannung in AC und DC am Pulsoxymeter Frontend bestimmt. 
+    Zuerst wurde jeweils mithilfe des Oszilloskops die Ausgangsspannung AC und DC am Pulsoxymeter Frontend bestimmt.
     Bewegungsartefakte galt es weitgehend zu vermeiden.\\
     Anschliessend wurde noch der Dunkelwert aufgenommen um die Einflüsse der Umgebung kompensieren zu können.
-    Mithilfe der \cite{Pulsoxymetrie} konnte die Sauerstoffsättigung wie folgt ermittelt werden:
+    Mithilfe der Formeln aus \cite{Pulsoxymetrie} konnte die Sauerstoffsättigung wie folgt ermittelt werden:
     \begin{equation}
         R = \frac{AC_{rot}}{DC_{rot} - Dunkelwert} 
     \end{equation}
@@ -177,9 +182,9 @@
     Keine Bewegungsartefakte zu erzeugen war ein Ding der Unmöglichkeit, da einerseits für die Messung immer
     durchgehend ein Taster gedrückt werden musste, andererseits ist der Sensor für die Messung nur sehr klein und es
     gibt keine Ablagemöglichkeit, um den Finger für beide Messungen exakt gleich zu halten.\\
-    Ein weiteres Hindernis waren Lichteinflüsse wie Deckenbeleuchtung oder Fenster aus der Umgebung die trotz aller
-    Bemühungen des Abdeckens nicht verhindert werden konnten.
-    Zur Kompensation dieser wurde die Dunkelspannung bestimmt.
+    Ein weiteres Hindernis waren Lichteinflüsse wie Deckenbeleuchtung oder die Sonne, die trotz aller
+    Bemühungen nicht verhindert werden konnten.
+    Teilweise konnten diese Einflüsse mit der Dunkelspannung kompensiert werden.
 
     \subsection{Proband Chris Rüttimann}
     \begin {table} [h]
@@ -209,20 +214,21 @@
     \end{tabular}  
     \end{table}
     Die Messung mit dem Pulsoxymeter war wie schon beschrieben sehr schwierig.
-    Es benötigte viel Versuche um ein Ergebnis zu erhalten, das keine offensichtlichen Störgrössen enthielt.
-    Die Anschliessende Berechnung der Sauerstoffsättigung ergab allerdings einen sehr unplausiblen Wert, da er über
-    hundert Prozent liegt, siehe \autoref{tab:chris_frontend}.
+    Es benötigte viele Versuche um ein Ergebnis zu erhalten, das keine offensichtlichen Störgrössen enthielt.
+    Die Berechnung der Sauerstoffsättigung ergab dann allerdings einen sehr unplausiblen Wert, da er über
+    100\% liegt, siehe \autoref{tab:chris_frontend}.
     Diese Sättigung gibt eigentlich an, wie viel Prozent des gesamten Hämoglobins im Blut mit Sauerstoff beladen sind.
     Das können folglich nicht über 100\% sein.\\\\
-    Die Messung mit dem handelsüblichen Pulsoxymeter erzielte sofort ein schlüssiges Ergebnis mit einer
+    Die Messung mit dem handelsüblichen Pulsoxymeter erzielte ein schlüssiges Ergebnis mit einer
     Sauerstoffsättigung von 97\%, siehe \autoref{tab:chris_oxy}.\\
     Der Normwert für arterielles Blut liegt bei 94-97\%, bei jungen, gesunden Erwachsenen ein Wert nahe 100\%.
 
     \subsection{Proband Leona Köck}
-    Ebenso wie beim ersten Proband war es auch hier wegen der Störeinflüsse nicht möglich, mit dem Frontend eine
-    plausible Sauerstoffsättigung zu ermitteln, der berechnet Wert von 210\% liegt nicht im gültigen Bereich.
-    Mit dem handelsüblichen Pulsoxymeter konnte abermals eine glaubwürdige Sättigung von 97\%, siehe
-    \autoref{tab:leona_oxy}, ermitteln.
+    Wie auch beim ersten Proband war es hier wegen den Störeinflüssen nicht möglich, mit dem Frontend eine
+    plausible Sauerstoffsättigung zu ermitteln.
+    Der berechnet Wert von 210\% liegt nicht im gültigen Bereich.
+    Mit dem handelsüblichen Pulsoxymeter konnte eine glaubwürdige Sättigung von 97\%, siehe
+    \autoref{tab:leona_oxy}, ermittelt werden.
 
     \begin {table} [h]
     \centering
@@ -256,7 +262,7 @@
 	Es ist sehr spannend zu sehen, wie solch ein medizinischen Messgerät funktionieren und realtiv simpel nachgebaut
     werden können.\\
     Allerdings liefert das Pulsoxymeter Frontend keinerlei zuverlässige Messergebnisse und ist somit aus
-    diagnostischer Sicht unbrauchbar.
+    diagnostischer Sicht nicht ohne weitere Anpassungen zu brauchen.
     \pagebreak
 
     \section*{Eigenständigkeitserklärung}
