@@ -116,7 +116,7 @@
         \item[b] Wie gross ist der Einfluss der Umgebungstemperatur bei 10°, 20° und 30° C auf Meereshöhe?
         \item[] 10° C: $\frac{273.2+37}{273.2+10}*\frac{101-0.9}{101-6.266}=1.157$
         \item[] 20° C: $\frac{273.2+37}{273.2+20}*\frac{101-0.9}{101-6.266}=1.118$
-        \item[] 30° C: $\frac{273.2+37}{273.2+30}*\frac{101-0.9}{101-6.266}=1.081$
+        \item[] 30° C: $\frac{273.2+37}{273.2+30}*\frac{101-0.9}{101-6.266}=1.081$ %todo Einheiten?
 
     \end{itemize}
 
@@ -131,6 +131,17 @@
 
     Das Messgerät ist ein offenes System, bei dem in die freie Atmosphäre geatmet wird.
     Jeder Proband verwendete eine eigene Spirette.
+    Während des ganzen Versuchs wurde strikt auf die Einhaltung aller COVID-19 Massnahmen geachtet.\\\\
+    Ziel der Messung war es, mit dem Ultraschallspirometer einen Tiffeneau-Test durchzuführen.
+    Durch diese Messung kann die relative Einsekundenkapazität, auch Tiffenau-Index genannt, berechnet werden.
+    \begin{equation}
+        Tiffeneau-Index = \frac{FEV_{1}}{FVC} * 100\%
+    \end{equation}
+    Dieser Index ist stark von Geschlecht, Alter, Körpergrösse und Gesundheitszustand abhängig und beträgt
+    durchschnittlich ca.
+    75\%, eine Abweichung von +-5\% ist noch im grüne Bereich.\\\\
+    Es wurden pro Proband zwei Messungen mit jeweils zwei Versuchen durchgeführt, pro Versuch wurde viermal ein- und
+    ausgeatmet.
 
     \section{Ergebnisse}
     \subsection{Proband Chris Rüttimann}
@@ -147,8 +158,14 @@
         \caption{Chris, Messreihe 2}
     \end{figure}
 
-    Die Messungen zeigen, dass bei Proband Chris die Lungenfunktion dem erwarteten Wert entsprechen.
-    Es können keine Abweichungen festgestellt werden, die auf eine Lungenkrankheit deuten.
+    Aus den vollständigen Messergebnissen, siehe \autoref{sec:chris1} und \autoref{sec:chris2,} geht hervor, dass der
+    Proband Rüttimann einen Tiffeneau-Index von 83\% bzw. 81\% erreicht hat.
+    Diese beiden Werte weichen vom Sollwert, der 87\% beträgt, nur minimal ab.
+
+    Die Flussvolumenkurve verläuft linear und ohne Knicke, das entspricht laut \autoref{lungenkrankheiten} dem
+    Normalbefund.
+    %Die Messungen zeigen, dass bei Proband Chris die Lungenfunktion dem erwarteten Wert entsprechen.
+    %Es können keine Abweichungen festgestellt werden, die auf eine Lungenkrankheit deuten.
 
     \pagebreak
 
@@ -166,10 +183,25 @@
         \caption{Leona, Messreihe 2}
         \end{figure}
 
-    Bei Probandin Leona ist eine sehr leichte Obstruktion erkennbar.
-    Es ist bekannt, dass ihr linker Lungenflügel etwas kleiner ist wie im Durchschnitt.
+    %Bei Probandin Leona ist eine sehr leichte Obstruktion erkennbar.
+    %Es ist bekannt, dass ihr linker Lungenflügel etwas kleiner ist wie im Durchschnitt.
+    % i han aber ka COPD :'(
+    %todo leona1 wird nicht angezeigt
 
-    \section{Lungenkrankheiten}
+    Aus den vollständigen Messergebnissen, siehe \autoref{sec:leona1} und \autoref{sec:leona2,} geht hervor, dass der
+    Proband Rüttimann einen Tiffeneau-Index von 80.7\% erreicht hat.
+    Diese beiden Werte weichen vom Sollwert, der 87\% beträgt ein wenig ab.
+
+    Vergleicht man die Messergebnisse von den zwei Probanden ist sehr auffällig, dass die Absoluten Volumenwert um ca
+    . 2L unterscheiden.
+    Das kommt daher, dass Frauen rund 25\% weniger Vitalkapazität haben als Männer.
+    Zudem ist Herr Rüttimann mit einer Körpergrösse von 1.90m verhältnismässig gross, dementsprechend ist auch das
+    Lungenvolumen grösser.
+
+    %Die Flussvolumenkurve verläuft linear und ohne Knicke, das entspricht laut \autoref{lungenkrankheiten} dem
+    %Normalbefund.
+
+    \section{Lungenkrankheiten} \label{Lungenkrankheiten}
 
     \begin{figure}[H]
         \includegraphics[width=15cm]{Dateien/Flusskurve.jpeg}
@@ -177,10 +209,10 @@
         \label{fig:flusskurve}
     \end{figure}
 
-    Abbildung \ref{fig:flusskurve} zeigt verschiedene Fluss-Volumenkurve und die dazugehörigen medizineschen Befunde.
+    Abbildung \ref{fig:flusskurve} zeigt verschiedene Fluss-Volumenkurven und die dazugehörigen medizineschen Befunde.
     Bei einer Obstruktion ist die Kurve konvex deformiert.
     Liegt eine Restriktion vor, hat die Kurve dieselbe Form wie beim Normalbefund, ist aber kleiner.
-
+    %todo: einzelne Sachen ein bisschen erklären (aka blabla)
     \pagebreak
 
     \section*{Eigenständigkeitserklärung}
