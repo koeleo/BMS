@@ -108,15 +108,15 @@
     \begin{itemize}
         \item[a]  Weshalb kann eine lebensgefährliche Kohlenmonoxid-Vergiftung über die
         Pulsoxymetrie nicht erkannt werden?
-        \item[] Bei der Pulsoxymetrie wird ausgenutzt, dass beladene Hämaglobin, im Normalfall oxygeniertes Hämoglobin, %todo, hämaglobin vs hämoglobin?
-        bei optischen Wellenlängen einen deutlich anderen Absorptionsverlauf als desoxygeniertes Hämoglobin.
+        \item[] Bei der Pulsoxymetrie wird ausgenutzt, dass beladene Hämoglobin, im Normalfall oxygeniertes
+        Hämoglobin, bei optischen Wellenlängen einen deutlich anderen Absorptionsverlauf als desoxygeniertes Hämoglobin.
         Es kann aber nicht unterschieden werden, welcher Stoff tatsächlich an das Hämoglobin gebunden ist.
         \item[b] Welche Bedingung müsste ein Pulsoxymeter erfüllen, um eine Kohlenmonoxid Vergiftung zu erkennen?
-        \item[]  Die sogenannten CO-Oxymeter messen mit 4 bis 7 anstatt der sonst verwendeten 2 verschiedenen Wellenlängen und sind daher in der 
-        Lage, Bindungen mit Kohlenmonoxid von Bindungen mit Sauerstoff optisch zu unterscheiden.
-        \item[c] Wozu schaltet man im Messzyklus eine Dunkelphase ein? Was wird damit
-        korrigiert?
-        \item[] In der Dunkelphase werden die momentanen Störeinflüsse aus der Umgebung ermittelt und kompensiert.
+        \item[]  Die sogenannten CO-Oxymeter messen mit vier bis sieben anstatt der sonst verwendeten zwei
+        verschiedenen Wellenlängen und sind daher in der Lage, Bindungen mit Kohlenmonoxid von Bindungen mit Sauerstoff optisch zu unterscheiden.
+        \item[c] Wozu schaltet man im Messzyklus eine Dunkelphase ein? Was wird damit korrigiert?
+        \item[] In der Dunkelphase werden die momentanen Störeinflüsse aus der Umgebung ermittelt um sie dann zu
+        kompensieren.
         \item[d] Was ist die funktionelle und fraktionelle Sauerstoffsättigung?
         \item[] Funktionelle Sauerstoffsättigung: 
         \begin{equation}
@@ -134,7 +134,8 @@
         daher sollte nicht auf den Absolutwert, sondern auf die Messwertänderung geachtet werden.
     \end{itemize}
 
-    Zusätzlich wurde das Blockschaltbild (\autoref{fig:block}) genauer untersucht.
+    Zusätzlich wurde das Blockschaltbild (\autoref{fig:block}) mit den einzelnen Komponenten anhand des
+    gegebenen Schaltplans (siehe \cite{schaltplan}) erstellt und deren Funktion genauer untersucht.
 
     \begin{figure}[H]
         \centering
@@ -143,13 +144,14 @@
         \label{fig:block}
     \end{figure}
 
-    Das Polsoxymeter Frontend hat 2 LED's mit unterschiedlichen Wellenlängen.
+    Das Polsoxymeter Frontend hat zwei LED's mit unterschiedlichen Wellenlängen.
     Diese werden über zwei Konstantstromquellen mit Strom versorgt.
     Sobald das Licht den Finger durchdrungen hat, wird es von einem Optischen Sensor in ein Signal umgewandelt.
     Im Blockschaltbild ist der Sensor durch eine Photodiode dargestellt, der Sensor selbst besteht aber aus weiteren Komponenten.
-    Dieses Signal wird danach verstärkt und als DC Out ausgegeben.
+    Dieses Signal wird danach verstärkt und als \emph{DC Out} ausgegeben.
     Dasselbe Signal läuft durch Hoch-, Tief- und wieder einen Hochpass, bevor es als AC Signal verwendet werden kann.
-    Gemäss Schema gäbe es noch die Möglichkeit, dass Ausgangssignal des Optischen Sensors über einen Spannungsfolger direkt zu verwenden (RAW OUT), dies wurde jedoch in diesem Praktikum nicht benötigt.
+    Gemäss Schema gäbe es noch die Möglichkeit, dass Ausgangssignal des Optischen Sensors über einen Spannungsfolger
+    direkt zu verwenden (\emph{RAW OUT}), dies wurde jedoch in diesem Praktikum nicht benötigt.
     \\\\
 
     Für den Versuch wurden folgende Materialien benötigt:
@@ -259,7 +261,7 @@
     \end{table}
 
     \section{Kritik und Anregungen}
-	Es ist sehr spannend zu sehen, wie solch ein medizinischen Messgerät funktionieren und realtiv simpel nachgebaut
+	Es ist sehr spannend zu sehen, wie solche medizinischen Messgeräte funktionieren und realtiv simpel nachgebaut
     werden können.\\
     Allerdings liefert das Pulsoxymeter Frontend keinerlei zuverlässige Messergebnisse und ist somit aus
     diagnostischer Sicht nicht ohne weitere Anpassungen zu brauchen.
