@@ -134,16 +134,13 @@
 
     \subsubsection{Testmessung an Gefässen}
     Um Messungen an den Gefässen der Probanden vorzunehmen wurde auf den 8MHz Transducer gewechselt. 
-    Am Dopplergerät wurdend ie Doppler-indizies S/D und RI eingestellt. 
+    Am Dopplergerät wurdend die Dopplerindizies S/D und RI eingestellt.
     Bei den beiden Probanden Chris Rüttimann und Leona Köck wurden Messungen sowohl an der Carotis Communis (Halsschalgader), als auch an der Arteria Carotis (Handgelenk) durchgeführt.
-
-    \subsubsection{FFT}
-    %todo FFT einfügen, daten müssen iwo am usbstick sein
 
     \section{Ergebnisse}
     \subsubsection{Ausmessen des Dopplergerätes HiDop 360}
     Wie nach lesen der Angabe zu erwarten war, stimmte die gemessene Frequenz des Dopplergeräts nicht genau mit der des Funtionsgenerators überein.
-    Zu sehen ist dies in der Abbildung %todo, welche Abbildung?
+    Zu sehen ist dies in der \autoref{fig:offset}.
     Das ist der Fall, weil der Funktionsgenerator genauer ist als des medizinischen Messgeräts.
     Die Frequenz des Quarzes des Dopplergerätes weicht aufgrund von Temperatur und Alter ab und ist normal.
     Diese Differenz wird in ppm angegeben, wobei 100ppm bei medizinischen Messgeräten dem Standard entspricht.
@@ -153,24 +150,29 @@
 
     \begin{figure}[H]
         \includegraphics[width=16cm]{images/4001MHz.png}
+        \caption{Offset Dopplergerät, eigene Grafik}
+        \label{fig:offset}
     \end{figure}
 
     \subsubsection{Testmessung an Gefässen}
     Bei der Messung selbst ist die gemessene Frequenz kaum von Bedeutung, das Hauptaugenmerk liegt auf dem Muster.
-    Dieses Muster ist sehr komplex variiert je nach Messstelle.
+    Dieses Muster ist sehr komplex und variiert stark nach Messstelle.
     Nur erfahrene Ärzte können dieses Muster zuverlässig interpretieren.
 
     Die Untersuchung der Halsschlagader mit Ultraschall wird in den meisten Fällen zur Kontrolle oder Diagnostizierung
     einer Verengung, einer sogennanten Karotisstenose, durchgeführt.
     Dadurch könnten präventive Massnahmen gegen einen Schlaganfall eingeleitet werden.
 
-
     Beim Proband Rüttimann war es sowohl am Hals auch am Handgelenk sehr einfach ein passendes Signal zu erhalten.
 
     Bei Frau Köck war es leider nicht so einfach ein durchgehendes Signal an der Halsschlagader zu erhalten.
     Schliesslich konnte nach Beachtung des 60° Winkels des Transducers am Vorderrand gemessen werden.
 
-    Es ist sehr auffallend, dass bei
+    Gemäss \cite{duplex} sollte das Muster zwischen Handgelenk und Hals eindeutig unterscheidbar sein.
+    Die Messungen an den zwei Probanden zeigen auch unterschiedliche Muster, jedoch zeigt die Handmessung das Halsmuster und umgekehrt.
+    Vermutlich ist bei der Beschriftung der Messungen ein Fehler unterlaufen, dies ist jetzt jedoch nicht mehr nachvollziehbar.
+
+    % Es ist sehr auffallend, dass bei
     %todo deutung: https://www.unispital-basel.ch/fileadmin/unispitalbaselch/Departemente/DKTT/Angiologie/Fortbildungen/Duplexsonografie19/DE/1.2_Spektralanalyse_Pr%c3%a4sentation_DE_2019.pdf
     % eigentlich: zwei zacken voll klar erkennbar, druck im hals größer als an der hand
     % stimmt aber eig nicht weil bei chris stimmt iwie ned?
@@ -188,18 +190,37 @@
      %Leona: schwer zu finden.... auf Ton hören hilft
 
     \begin{figure}[H]
-        \includegraphics[width=16cm]{images/Chris_Hals.png}
+        \includegraphics[width=15cm]{images/Chris_Hals.png}
+        \caption{Rüttimann Halsschlagader, eigene Grafik}
     \end{figure}
     \begin{figure}[H]
-        \includegraphics[width=16cm]{images/Chris_Handgelenk.png}
+        \includegraphics[width=15cm]{images/Chris_Handgelenk.png}
+        \caption{Rüttimann Handgelenk, eigene Grafik}
     \end{figure}
     \begin{figure}[H]
-        \includegraphics[width=16cm]{images/Leona_Hals.png}
+        \includegraphics[width=15cm]{images/Leona_Hals.png}
+        \caption{Köck Halsschlagader, eigene Grafik}
     \end{figure}
     \begin{figure}[H]
-        \includegraphics[width=16cm]{images/Leona_Handgelenk.png}
+        \includegraphics[width=15cm]{images/Leona_Handgelenk.png}
+        \caption{Köck Handgelenk, eigene Grafik}
     \end{figure}
+
+    \pagebreak
+
     \subsubsection{FFT}
+
+    \autoref{fig:fft} zeigt einen Screenshot des zweiseitige logarithmische Power-Spektrums.
+    Dies wurde mit den Daten aus HiDopData erstellt und dem zur Verfügung gestelltem Matlab Skript erstellt.
+    Jedes Gefäss erzeugt ein für sich eindeutiges Spektrum, welches durch eine Fachperson auf mögliche Defekte interpretiert werden kann.
+
+    \begin{figure}[H]
+        \includegraphics[width=16cm]{images/Movie_Screenshot}
+        \caption{Screenshot Power-Spektrum, eigene Grafik}
+        \label{fig:fft}
+    \end{figure}
+
+    \pagebreak
 
     \section*{Eigenständigkeitserklärung}
     \addcontentsline{toc}{section}{Eigenständigkeitserklärung}
