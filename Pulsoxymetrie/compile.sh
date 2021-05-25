@@ -1,0 +1,6 @@
+pdflatex Pulsoxymetrie_Praktikumsbericht.tex
+
+biber Pulsoxymetrie_Praktikumsbericht
+
+pdflatex Pulsoxymetrie_Praktikumsbericht.tex
+exit

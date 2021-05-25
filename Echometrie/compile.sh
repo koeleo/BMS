@@ -1,3 +1,4 @@
 pdflatex Echometrie_Praktikumsbericht.tex
+biber Echometrie_Praktikumsbericht
 pdflatex Echometrie_Praktikumsbericht.tex
 exit

@@ -1,0 +1,4 @@
+pdflatex Doppler_Praktikumsbericht.tex
+biber Doppler_Praktikumsbericht
+pdflatex Doppler_Praktikumsbericht.tex
+exit
